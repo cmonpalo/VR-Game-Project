@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine;
-
 public class GoGoHand : MonoBehaviour
 {
     public Transform handAnchor; // Left or Right Hand Anchor
@@ -90,6 +88,13 @@ public class GoGoHand : MonoBehaviour
         {
             rb.isKinematic = true; // Disable physics while holding
         }
+
+        // Check if the object has the Wand component and call Grasp
+        Wand wand = obj.GetComponent<Wand>();
+        if (wand != null)
+        {
+            wand.Grasp(handAnchor); // Call the Grasp method on the Wand script
+        }
     }
 
     // Release (unparent) the object from the hand
@@ -102,6 +107,13 @@ public class GoGoHand : MonoBehaviour
         {
             rb.isKinematic = false; // Re-enable physics
             rb.velocity = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch); // Apply velocity for throw
+        }
+
+        // Check if the object has the Wand component and call Release
+        Wand wand = obj.GetComponent<Wand>();
+        if (wand != null)
+        {
+            wand.Release(); // Call the Release method on the Wand script
         }
     }
 }
