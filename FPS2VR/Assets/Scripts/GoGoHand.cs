@@ -90,7 +90,7 @@ public class GoGoHand : MonoBehaviour
         }
 
         // Check if the object has the Wand component and call Grasp
-        Wand wand = obj.GetComponent<Wand>();
+        BigWand wand = obj.GetComponent<BigWand>();
         if (wand != null)
         {
             wand.Grasp(handAnchor); // Call the Grasp method on the Wand script
@@ -110,7 +110,7 @@ public class GoGoHand : MonoBehaviour
         }
 
         // Check if the object has the Wand component and call Release
-        Wand wand = obj.GetComponent<Wand>();
+        BigWand wand = obj.GetComponent<BigWand>();
         if (wand != null)
         {
             wand.Release(); // Call the Release method on the Wand script
