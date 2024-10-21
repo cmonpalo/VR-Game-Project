@@ -153,11 +153,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1909667117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &96395315 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6274413965011642561, guid: 1988a490fdf0da9488708c7adcb8baf0, type: 3}
-  m_PrefabInstance: {fileID: 6973953290400136743}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &118795747
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,7 +840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1418,7 +1413,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1957881560}
-  - {fileID: 96395315}
   m_Father: {fileID: 1632788223}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1632788221
@@ -1743,15 +1737,23 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1521877863}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6274413965011642561, guid: 1988a490fdf0da9488708c7adcb8baf0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.100000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6274413965011642561, guid: 1988a490fdf0da9488708c7adcb8baf0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6274413965011642561, guid: 1988a490fdf0da9488708c7adcb8baf0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.097
       objectReference: {fileID: 0}
     - target: {fileID: 6274413965011642561, guid: 1988a490fdf0da9488708c7adcb8baf0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.9499999
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 6274413965011642561, guid: 1988a490fdf0da9488708c7adcb8baf0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1789,6 +1791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big Wand
       objectReference: {fileID: 0}
+    - target: {fileID: 8424387864813680036, guid: 1988a490fdf0da9488708c7adcb8baf0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1804,3 +1810,4 @@ SceneRoots:
   - {fileID: 2066131687}
   - {fileID: 925185522}
   - {fileID: 912662190}
+  - {fileID: 6973953290400136743}
