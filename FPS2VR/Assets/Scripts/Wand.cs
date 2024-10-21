@@ -9,7 +9,13 @@ public class NewBehaviourScript : MonoBehaviour
     public float bulletVelocity = 30;
     public float bulletPrefabLifeTime = 3f;
 
+    public enum WeaponModel
+    {
+        Wand,
+        Bigwand
+    }
 
+    public WeaponModel thisWeaponModel;
 
     // Update is called once per frame
     void Update()
