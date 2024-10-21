@@ -2110,7 +2110,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 140182, guid: 7fa17baa3b5675444b8ceb73ad0fd39d, type: 3}
       propertyPath: m_Name
-      value: wand04_yellow
+      value: BigWand
       objectReference: {fileID: 0}
     - target: {fileID: 140182, guid: 7fa17baa3b5675444b8ceb73ad0fd39d, type: 3}
       propertyPath: m_Layer
