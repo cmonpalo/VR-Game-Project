@@ -10,6 +10,7 @@ public class GoGoHand : MonoBehaviour
     public float extensionFactor = 2.0f; // How much farther the virtual hand extends
     public LayerMask interactableLayer; // Set this to the layer for interactable objects
 
+    public GameObject currentWandObject;
     private Vector3 initialHandPosition;
     private GameObject selectedObject; // The currently selected object
 
@@ -81,11 +82,13 @@ public class GoGoHand : MonoBehaviour
     // Grasp (parent) the object to the hand
     void GraspObject(GameObject obj)
     {
+        currentWandObject = null;
         Debug.Log("Grasping: " + obj.name);
         obj.transform.SetParent(handAnchor); // Parent to the hand
         Rigidbody rb = obj.GetComponent<Rigidbody>();
         if (rb != null)
         {
+            currentWandObject = obj;
             rb.isKinematic = true; // Disable physics while holding
         }
 
@@ -93,12 +96,20 @@ public class GoGoHand : MonoBehaviour
         BigWand wand = obj.GetComponent<BigWand>();
         if (wand != null)
         {
+            obj.GetComponent<BigWand>().wandObject = obj;
             wand.Grasp(handAnchor); // Call the Grasp method on the Wand script
         }
         StandardWand wand1 = obj.GetComponent<StandardWand>();
         if (wand1 != null)
         {
+            currentWandObject = obj;
             wand1.Grasp(handAnchor); // Call the Grasp method on the Wand script
+        }
+        SneezeWand wand2 = obj.GetComponent<SneezeWand>();
+        if (wand2 != null)
+        {
+            currentWandObject = obj;
+            wand2.Grasp(handAnchor); // Call the Grasp method on the Wand script
         }
     }
 
@@ -124,6 +135,11 @@ public class GoGoHand : MonoBehaviour
         if (wand1 != null)
         {
             wand1.Release(); // Call the Release method on the Wand script
+        }
+        SneezeWand wand2 = obj.GetComponent<SneezeWand>();
+        if (wand2 != null)
+        {
+            wand2.Release(); // Call the Grasp method on the Wand script
         }
     }
 }
