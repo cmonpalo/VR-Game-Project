@@ -1163,6 +1163,7 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 64
+  currentWandObject: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,10 +1506,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c42a5ace3a7cf5408965ef929282676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {fileID: 445220832}
-  pointB: {fileID: 1063419054}
-  speed: 3
-  stopDistance: 0.1
 --- !u!136 &1275756324
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1997,6 +1994,7 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 64
+  currentWandObject: {fileID: 0}
 --- !u!4 &1783687282 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 462066, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
@@ -2192,7 +2190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ad876b1316eeaa42ae1617b1a4c13ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 164848, guid: 4429006b7cac93d40910746372ea5184, type: 3}
+  bulletPrefab: {fileID: 6326333342596110965, guid: 407e9b792b8e92847b2b8b15d94f7435, type: 3}
   bulletSpawn: {fileID: 1509250826}
   bulletVelocity: 30
   bulletPrefabLifeTime: 3
@@ -2280,6 +2278,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2422749102429932702, guid: 7fa17baa3b5675444b8ceb73ad0fd39d, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 83732202075754640, guid: d4310b1dd79b1944791863211ab48659, type: 3}
     - target: {fileID: 6490255215952866331, guid: 7fa17baa3b5675444b8ceb73ad0fd39d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.001

@@ -60,7 +60,7 @@ public class BigWand : MonoBehaviour
         if (rb != null)
         {
 
-         rb.AddForce(transform.forward.normalized * bulletVelocity, ForceMode.Impulse);
+         rb.AddForce(transform.up.normalized * bulletVelocity, ForceMode.Impulse);
 
 
         }

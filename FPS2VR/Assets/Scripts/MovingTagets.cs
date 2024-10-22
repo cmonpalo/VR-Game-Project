@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class MovingTagets : MonoBehaviour
 {
-    [SeralizedField]
+    [SerializeField]
     Transform[] waypoints;
     int currentwaypoint = 0;
     Rigidbody rigidb;
-    [SeralizedField]
+    [SerializeField]
     float moveSpeed = 5;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class MovingTagets : MonoBehaviour
         Movement();
     }
 
-    void MouseMovement()
+    void Movement()
     {
        if(Vector3.Distance(transform.position, waypoints[currentwaypoint].position)<.25f) 
        {
@@ -30,6 +30,6 @@ public class MovingTagets : MonoBehaviour
         currentwaypoint = currentwaypoint % waypoints.Length;
        }
        Vector3 _dir =(waypoints[currentwaypoint].position - transform.position).normalized;
-       rigidb.MovePosition(transform.position+ _dir * moveSpeed * time.deltaTime);
+       rigidb.MovePosition(transform.position+ _dir * moveSpeed * Time.deltaTime);
     }
 }
