@@ -55,7 +55,8 @@ public class StandardWand : MonoBehaviour
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.AddForce(handAnchor.forward.normalized * bulletVelocity, ForceMode.Impulse);
+            rb.AddForce(transform.up.normalized * bulletVelocity, ForceMode.Impulse);
+            GetComponent<AudioSource>().Play();
         }
 
         // Destroy the bullet after some time

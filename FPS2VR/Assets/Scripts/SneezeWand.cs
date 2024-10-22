@@ -61,8 +61,9 @@ public class SneezeWand : MonoBehaviour
             for (int i = 0; i < bulletsShot; i++)
             {
             // Vector3 dir = transform.forward + new Vector3(Random.Range(-8, 8), Random.Range(-8,8), Random.Range(-8, 8));
-                rb.AddForce(handAnchor.forward.normalized * 10 + new Vector3(Random.Range(-4, 4), Random.Range(-4, 4), Random.Range(-4, 4)), ForceMode.Impulse);           
+                rb.AddForce(transform.up.normalized * 10 + new Vector3(Random.Range(-i / 2, i / 2), Random.Range(-i / 2, i / 2), Random.Range(-i / 2, i / 2)), ForceMode.Impulse);    
             }
+            GetComponent<AudioSource>().Play();   
         }
 
         // Destroy the bullet after some time

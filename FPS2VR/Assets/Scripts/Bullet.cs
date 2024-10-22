@@ -10,7 +10,13 @@ public class Bullet : MonoBehaviour
     {
         print("hit" + collision.gameObject.name + " !");
         Destroy(gameObject);
+        collision.gameObject.active = false;
+        Invoke(nameof(show), 2f);  
     }
    }
-    
+    private void show(GameObject objectGO)
+    {
+        objectGO.active = true;
+        
+    }
 }
