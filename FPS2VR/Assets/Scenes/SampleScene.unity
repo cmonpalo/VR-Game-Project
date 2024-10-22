@@ -232,6 +232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StandardWand
       objectReference: {fileID: 0}
+    - target: {fileID: 115338, guid: d9a3ec0dc2aae4e43af8b98e0eeb7662, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 407348, guid: d9a3ec0dc2aae4e43af8b98e0eeb7662, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -297,6 +301,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 115338, guid: d9a3ec0dc2aae4e43af8b98e0eeb7662, type: 3}
       insertIndex: -1
       addedObject: {fileID: 217784275}
+    - targetCorrespondingSourceObject: {fileID: 115338, guid: d9a3ec0dc2aae4e43af8b98e0eeb7662, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 217784279}
   m_SourcePrefab: {fileID: 100100000, guid: d9a3ec0dc2aae4e43af8b98e0eeb7662, type: 3}
 --- !u!1 &217784273 stripped
 GameObject:
@@ -347,12 +354,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773c2f0e7f89c3e479f52ca3c1c9cada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 158280, guid: 59d1ef214639e9d47a9c84b42033ae5f, type: 3}
+  bulletPrefab: {fileID: 4360714254424291390, guid: 6dc83d32d4605f6499b261acb4b13f56, type: 3}
   bulletSpawn: {fileID: 885020545}
   bulletVelocity: 30
   bulletPrefabLifeTime: 3
   thisWeaponModel: 1
   handAnchor: {fileID: 0}
+--- !u!136 &217784279
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217784273}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.030192748
+  m_Height: 0.43242523
+  m_Direction: 1
+  m_Center: {x: -0.0022071344, y: 0.14641124, z: -0.000000046542876}
 --- !u!1 &342396378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 140182, guid: 7fa17baa3b5675444b8ceb73ad0fd39d, type: 3}
@@ -853,7 +883,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 885020545}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: StandardWandSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1022,7 +1052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1030,7 +1060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1074,7 +1104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: _trackingOriginType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1699,7 +1729,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1509250826}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SneezeWandSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1815,7 +1845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!143 &1632788222
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2016,6 +2046,10 @@ PrefabInstance:
     - target: {fileID: 117502, guid: 2b46cc393735f634f89cb88a9e97aaa7, type: 3}
       propertyPath: m_Name
       value: SneezeWand
+      objectReference: {fileID: 0}
+    - target: {fileID: 117502, guid: 2b46cc393735f634f89cb88a9e97aaa7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 411128, guid: 2b46cc393735f634f89cb88a9e97aaa7, type: 3}
       propertyPath: m_LocalScale.x

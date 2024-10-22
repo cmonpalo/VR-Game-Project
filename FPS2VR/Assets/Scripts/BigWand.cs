@@ -8,8 +8,10 @@ public class BigWand : MonoBehaviour
     public Transform bulletSpawn;
     public float bulletVelocity = 30;
     public float bulletPrefabLifeTime = 3f;
+
     
     public GameObject wandObject;
+
     public enum WeaponModel
     {
         BigWand,
@@ -57,7 +59,10 @@ public class BigWand : MonoBehaviour
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.AddForce(transform.forward.normalized * bulletVelocity, ForceMode.Impulse);
+
+         rb.AddForce(transform.forward.normalized * bulletVelocity, ForceMode.Impulse);
+
+
         }
 
         // Destroy the bullet after some time
