@@ -13,6 +13,10 @@ public class GoGoHand : MonoBehaviour
     public GameObject currentWandObject;
     private Vector3 initialHandPosition;
     private GameObject selectedObject; // The currently selected object
+    private GameObject highlightedObject; // The currently highlighted object
+
+    // Store the original color for reverting after deselecting
+    private Color originalColor;
 
     void Start()
     {
@@ -47,13 +51,50 @@ public class GoGoHand : MonoBehaviour
         {
             if (hit.collider != null)
             {
-                Debug.Log("Hit object: " + hit.collider.name);
+                // Highlight object when pointing, but don't highlight the selected object
+                if (hit.collider.gameObject != selectedObject)
+                {
+                    ClearHighlight(); // Clear previous highlight if a new object is detected
+                    HighlightObject(hit.collider.gameObject); // Highlight the new object
+                }
                 selectedObject = hit.collider.gameObject;
             }
         }
         else
         {
-            selectedObject = null; // Clear the selected object if no hit
+            ClearHighlight(); // Clear highlight when no object is detected
+            selectedObject = null;
+        }
+    }
+
+    // Adds a highlight effect to the object
+    void HighlightObject(GameObject obj)
+    {
+        Renderer renderer = obj.GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            // Save original color if this object hasn't been highlighted yet
+            if (highlightedObject == null || highlightedObject != obj)
+            {
+                originalColor = renderer.material.color;
+            }
+
+            renderer.material.color = Color.yellow; // Change color to highlight
+            highlightedObject = obj;
+        }
+    }
+
+    // Clears the highlight effect from the object
+    void ClearHighlight()
+    {
+        if (highlightedObject != null)
+        {
+            Renderer renderer = highlightedObject.GetComponent<Renderer>();
+            if (renderer != null)
+            {
+                renderer.material.color = originalColor; // Reset color to original
+            }
+            highlightedObject = null;
         }
     }
 
@@ -72,9 +113,9 @@ public class GoGoHand : MonoBehaviour
         // Release object when hand trigger is released
         if (OVRInput.GetUp(OVRInput.Button.PrimaryHandTrigger))
         {
-            if (selectedObject != null)
+            if (currentWandObject != null)
             {
-                ReleaseObject(selectedObject);
+                ReleaseObject(currentWandObject);
             }
         }
     }
@@ -82,6 +123,7 @@ public class GoGoHand : MonoBehaviour
     // Grasp (parent) the object to the hand
     void GraspObject(GameObject obj)
     {
+        ClearHighlight(); // Clear the highlight once object is selected
         currentWandObject = null;
         Debug.Log("Grasping: " + obj.name);
         obj.transform.SetParent(handAnchor); // Parent to the hand
@@ -139,7 +181,16 @@ public class GoGoHand : MonoBehaviour
         SneezeWand wand2 = obj.GetComponent<SneezeWand>();
         if (wand2 != null)
         {
-            wand2.Release(); // Call the Grasp method on the Wand script
+            wand2.Release(); // Call the Release method on the Wand script
         }
+
+        // Reset color when released
+        Renderer renderer = obj.GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            renderer.material.color = originalColor;
+        }
+
+        currentWandObject = null; // Clear current object
     }
 }
