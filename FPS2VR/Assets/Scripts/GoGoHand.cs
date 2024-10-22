@@ -95,6 +95,11 @@ public class GoGoHand : MonoBehaviour
         {
             wand.Grasp(handAnchor); // Call the Grasp method on the Wand script
         }
+        StandardWand wand1 = obj.GetComponent<StandardWand>();
+        if (wand1 != null)
+        {
+            wand1.Grasp(handAnchor); // Call the Grasp method on the Wand script
+        }
     }
 
     // Release (unparent) the object from the hand
@@ -114,6 +119,11 @@ public class GoGoHand : MonoBehaviour
         if (wand != null)
         {
             wand.Release(); // Call the Release method on the Wand script
+        }
+        StandardWand wand1 = obj.GetComponent<StandardWand>();
+        if (wand1 != null)
+        {
+            wand1.Release(); // Call the Release method on the Wand script
         }
     }
 }
