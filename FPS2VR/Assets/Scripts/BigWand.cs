@@ -61,7 +61,7 @@ public class BigWand : MonoBehaviour
         {
 
          rb.AddForce(transform.up.normalized * bulletVelocity, ForceMode.Impulse);
-
+         bullet.GetComponent<AudioSource>().Play();
 
         }
 
