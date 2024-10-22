@@ -1,22 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-   private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
    {
     if (collision.gameObject.CompareTag("Target"))
     {
-        print("hit" + collision.gameObject.name + " !");
+        Debug.Log("hit" + collision.gameObject.name + " !");
         Destroy(gameObject);
-        collision.gameObject.active = false;
-        Invoke(nameof(show), 2f);  
+        collision.gameObject.GetComponent<AudioSource>().Play();
     }
    }
-    private void show(GameObject objectGO)
-    {
-        objectGO.active = true;
-        
-    }
 }
