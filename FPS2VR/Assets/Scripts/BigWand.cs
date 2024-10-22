@@ -57,7 +57,7 @@ public class BigWand : MonoBehaviour
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.AddForce(BigWand.forward.normalized * bulletVelocity, ForceMode.Impulse);
+            rb.AddForce(transform.forward.normalized * bulletVelocity, ForceMode.Impulse);
         }
 
         // Destroy the bullet after some time
