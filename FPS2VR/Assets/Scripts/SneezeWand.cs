@@ -9,8 +9,6 @@ public class SneezeWand : MonoBehaviour
     public float bulletVelocity = 30;
     public float bulletPrefabLifeTime = 3f;
 
-    public float bulletsShot = 10;
-
     public float maxSpread = 8; //For sneezeWand
     public enum WeaponModel
     {
@@ -58,11 +56,9 @@ public class SneezeWand : MonoBehaviour
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            for (int i = 0; i < bulletsShot; i++)
-            {
+           
             // Vector3 dir = transform.forward + new Vector3(Random.Range(-8, 8), Random.Range(-8,8), Random.Range(-8, 8));
-                rb.AddForce(transform.up.normalized * 10 + new Vector3(Random.Range(-i / 2, i / 2), Random.Range(-i / 2, i / 2), Random.Range(-i / 2, i / 2)), ForceMode.Impulse);    
-            }
+                rb.AddForce(transform.up.normalized * 10 + new Vector3(Random.Range(-5, 5), Random.Range(-5, 5), Random.Range(-5, 5)), ForceMode.Impulse);    
             GetComponent<AudioSource>().Play();   
         }
 
