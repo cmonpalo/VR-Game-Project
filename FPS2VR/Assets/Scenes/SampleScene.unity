@@ -6388,9 +6388,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6996940811732667081, guid: 340c7efc2075e814286647834c3d9bde, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1440812074}
-    - targetCorrespondingSourceObject: {fileID: 6996940811732667081, guid: 340c7efc2075e814286647834c3d9bde, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1440812079}
   m_SourcePrefab: {fileID: 100100000, guid: 340c7efc2075e814286647834c3d9bde, type: 3}
 --- !u!1 &1440812072 stripped
 GameObject:
@@ -6424,27 +6421,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1440812079
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440812072}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.10997105, y: 0.23540992, z: 0.12698364}
-  m_Center: {x: 0.0000002849847, y: 0.11770496, z: 0.0000000037252903}
 --- !u!1 &1457392816
 GameObject:
   m_ObjectHideFlags: 0
@@ -9379,7 +9355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ad876b1316eeaa42ae1617b1a4c13ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 4360714254424291390, guid: 6dc83d32d4605f6499b261acb4b13f56, type: 3}
+  bulletPrefab: {fileID: 6326333342596110965, guid: 407e9b792b8e92847b2b8b15d94f7435, type: 3}
   bulletSpawn: {fileID: 1509250826}
   bulletVelocity: 30
   bulletPrefabLifeTime: 3
