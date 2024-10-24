@@ -331,7 +331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 115338, guid: d9a3ec0dc2aae4e43af8b98e0eeb7662, type: 3}
       propertyPath: m_TagString
-      value: Selectable
+      value: Throwable
       objectReference: {fileID: 0}
     - target: {fileID: 407348, guid: d9a3ec0dc2aae4e43af8b98e0eeb7662, type: 3}
       propertyPath: m_LocalScale.x
@@ -837,7 +837,7 @@ GameObject:
   - component: {fileID: 357086475}
   m_Layer: 6
   m_Name: Cube (5)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -970,7 +970,7 @@ GameObject:
   - component: {fileID: 357923251}
   m_Layer: 6
   m_Name: Cube (12)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1103,7 +1103,7 @@ GameObject:
   - component: {fileID: 386476672}
   m_Layer: 6
   m_Name: Cube (21)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1466,7 +1466,7 @@ GameObject:
   - component: {fileID: 506894386}
   m_Layer: 6
   m_Name: Cube (11)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1813,7 +1813,7 @@ GameObject:
   - component: {fileID: 599071666}
   m_Layer: 6
   m_Name: Cube (15)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2653,7 +2653,7 @@ GameObject:
   - component: {fileID: 763183893}
   m_Layer: 6
   m_Name: Cube (9)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3792,7 +3792,7 @@ GameObject:
   - component: {fileID: 935019464}
   m_Layer: 6
   m_Name: Cube (17)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4138,7 +4138,7 @@ GameObject:
   - component: {fileID: 984055798}
   m_Layer: 6
   m_Name: Cube (10)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4656,7 +4656,7 @@ GameObject:
   - component: {fileID: 1077252107}
   m_Layer: 6
   m_Name: Cube (8)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4927,7 +4927,7 @@ GameObject:
   - component: {fileID: 1138895123}
   m_Layer: 6
   m_Name: Cube (19)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5829,7 +5829,7 @@ GameObject:
   - component: {fileID: 1391071646}
   m_Layer: 6
   m_Name: Cube (6)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6067,7 +6067,7 @@ GameObject:
   - component: {fileID: 1404275907}
   m_Layer: 6
   m_Name: Cube (7)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6242,7 +6242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6996940811732667081, guid: 340c7efc2075e814286647834c3d9bde, type: 3}
       propertyPath: m_TagString
-      value: Selectable
+      value: Throwable
       objectReference: {fileID: 0}
     - target: {fileID: 7661168548729983091, guid: 340c7efc2075e814286647834c3d9bde, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6299,37 +6299,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6996940811732667081, guid: 340c7efc2075e814286647834c3d9bde, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1440812074}
-    - targetCorrespondingSourceObject: {fileID: 6996940811732667081, guid: 340c7efc2075e814286647834c3d9bde, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1440812073}
   m_SourcePrefab: {fileID: 100100000, guid: 340c7efc2075e814286647834c3d9bde, type: 3}
 --- !u!1 &1440812072 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6996940811732667081, guid: 340c7efc2075e814286647834c3d9bde, type: 3}
   m_PrefabInstance: {fileID: 1440812071}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1440812073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440812072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43f86b14a27b52f4f9298c33015b5c26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _transferOnSecondSelection: 0
-  _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
-  _twoGrabTransformer: {fileID: 0}
-  _targetTransform: {fileID: 0}
-  _maxGrabPoints: -1
-  _rigidbody: {fileID: 1440812074}
-  _kinematicWhileSelected: 1
-  _throwWhenUnselected: 1
 --- !u!54 &1440812074
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6624,7 +6599,7 @@ GameObject:
   - component: {fileID: 1504079912}
   m_Layer: 6
   m_Name: Cube (13)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7766,7 +7741,7 @@ GameObject:
   - component: {fileID: 1759471969}
   m_Layer: 6
   m_Name: Cube (16)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7899,7 +7874,7 @@ GameObject:
   - component: {fileID: 1765793351}
   m_Layer: 6
   m_Name: Cube (18)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8821,7 +8796,7 @@ GameObject:
   - component: {fileID: 2039601779}
   m_Layer: 6
   m_Name: Cube (4)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9326,7 +9301,7 @@ GameObject:
   - component: {fileID: 2051960609}
   m_Layer: 6
   m_Name: Cube (14)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9490,7 +9465,7 @@ GameObject:
   - component: {fileID: 2101633019}
   m_Layer: 6
   m_Name: Cube (20)
-  m_TagString: Selectable
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
