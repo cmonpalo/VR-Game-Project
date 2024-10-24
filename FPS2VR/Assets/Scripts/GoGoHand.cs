@@ -121,12 +121,14 @@ public class GoGoHand : MonoBehaviour
         Rigidbody rb = obj.GetComponent<Rigidbody>();
         if (rb != null)
         {
+
+            if (obj.CompareTag("Throwable")) {
+            rb.velocity = centerEyeAnchor.rotation * OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
+        }
             rb.isKinematic = false; // Re-enable physics
-            rb.velocity = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch); // Apply velocity for throw
+            rb.velocity = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch); // Apply velocity for throw
         }
-        if (obj.CompareTag("Throwable")) {
-            rb.velocity = centerEyeAnchor.rotation * OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
-        }
+        
 
         // Check if the object has the Wand component and call Release
         BigWand wand = obj.GetComponent<BigWand>();

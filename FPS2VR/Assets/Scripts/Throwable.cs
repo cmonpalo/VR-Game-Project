@@ -7,6 +7,12 @@ public class Throwable : MonoBehaviour
 
     public Transform handAnchor;
     private bool isHeld = false;
+
+    public bool armed = false;
+    [SerializeField] GameObject Explosion;
+
+    public float bulletPrefabLifeTime = 1f;
+    
     void Start()
     {
         
@@ -28,7 +34,22 @@ public class Throwable : MonoBehaviour
     {
         isHeld = false;
         handAnchor = null;
+        armed = true;
     }
 
+    private void OnTriggerEnter(Collider collision)
+   {
+    
 
+        if (armed == true) {
+        GameObject kaboom = Instantiate(Explosion);
+        Transform explosionTransform = kaboom.GetComponent<Transform>();
+        explosionTransform.position = transform.position;
+        Destroy(gameObject);
+        Destroy(kaboom, 2.0f);
+        
+        }
+   }
+
+    
 }
